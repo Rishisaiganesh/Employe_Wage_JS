@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script>
+    'use strict';
+    function askDefault(yes, no, theQues='can you Anser'){
+        if (question (theQues)) yes();
+        else no();
+    }
+    function ask(theQues, ...others){
+    if (question(theQues)) others[0]()
+    else others[1]();
+    }
+    function showOK(){
+        alert("You Agree");
+
+    }
+    function showCancle(){
+        alert("you cancle the execution.");
+    }
+    ask("Do you agree", showOK,showCancle);
+    askDefault(showOK, showCancle);
+
+</script>
