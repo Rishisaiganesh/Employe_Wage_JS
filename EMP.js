@@ -37,3 +37,22 @@ const WAGE_PER_HOUR =20;
     let empWage = empHRS * WAGE_PER_HOUR;
     console.log("Employe Wage is:" + empWage);
 }
+
+function getorkinhHours(empCheck) {
+    switch (empCheck){
+        case IS_PART__TIME:
+            return PART_TIME_HOURS;
+            case IS_FULL_TIME;
+            default:
+                return 0;
+    }
+
+    
+}
+{
+    let empHRS = 0;
+    let empCheck = Math.floor(Math.random() *10)%3;
+    empHRS = getWorkingHours(empCheck);
+    let empWage = empHRS * WAGE_PER_HOUR;
+    console.log("Emp WAGE:" + empWage);
+}
