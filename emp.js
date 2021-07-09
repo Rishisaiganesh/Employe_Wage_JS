@@ -12,6 +12,7 @@ const emp_full_timehr=8
 const emp_part_timehr=4
 const emp_perhr=20
 const numof_workingdays = 20
+const maxhrs_inmonth = 160
 {
     let emphr=0
     let emp_check=Math.floor(Math.random() * 10) %3
@@ -49,3 +50,12 @@ totalemphrs += getEmphr(emp_check)
 }
 let totalwage = totalemphrs*emp_perhr
 console.log("totalhrs="+totalemphrs + "TOTAL WAGE"+totalwage)
+
+totalhrs=0
+totaldays=0
+while(totalhrs <= maxhrs_inmonth && totaldays < numof_workingdays){
+    totaldays++
+    totalhrs += getEmphr(emp_check)
+}
+let total_wage=totalhrs*emp_perhr
+console.log("hrs="+totalhrs+" "+"days="+totaldays+" "+"wage="+total_wage)
