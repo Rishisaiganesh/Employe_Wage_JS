@@ -11,9 +11,10 @@ const emp_is_parttime=2
 const emp_full_timehr=8
 const emp_part_timehr=4
 const emp_perhr=20
+{
     let emphr=0
-    let check=Math.floor(Math.random() * 10) %3
-    switch(check){
+    let emp_check=Math.floor(Math.random() * 10) %3
+    switch(emp_check){
         case emp_is_fulltime:
             emphr=emp_full_timehr;
             break;
@@ -25,3 +26,19 @@ const emp_perhr=20
     }
     let empwage=emphr*emp_perhr;
     console.log("the empwage is:"+empwage)
+}
+function getEmphr(emp_check)
+{
+    switch(emp_check){
+        case emp_is_fulltime:
+            return emp_full_timehr;
+            case emp_is_parttime:
+                return emp_part_timehr;
+                default:
+                    return 0;
+    }
+}
+let emp_check=Math.floor(Math.random() * 10) %3
+let emphr=getEmphr(emp_check)
+let empwage=emphr*emp_perhr
+console.log("get emp hour"+emphr+" "+"emp wage"+empwage)
