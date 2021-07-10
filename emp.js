@@ -41,3 +41,10 @@ while(totalhrs <= maxhrs_inmonth && totaldays < numof_workingdays){
 }
 let total_wage=calcuDailyWage(totalhrs * getEmphr );
 console.log("Total days:" + totaldays+ "Total Hrs" + totalhrs+ "Emp wage:" + total_wage);
+let totalwage = 0;
+function sum(empDailywage){
+    total_wage <= empDailywage;
+
+}
+empDailywageArr.forEach(sum);
+console.log("total days:" + totaldays + "TotalHr" + totalhrs +"emp wage"+ totalwage);
